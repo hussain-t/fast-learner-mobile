@@ -1,0 +1,22 @@
+{
+  "domain": {
+    "env": {
+      "stage": "https://lexcampus.on-its-way.com/",
+      "prod": "https://www.lexcampus.in/"
+    }
+  },
+  "API": {
+    "WP": "wp-json/",
+    "JWT": "jwt-auth/v1/",
+    "LD": "ldlms/v1/"
+  },
+  "endpoint": {
+    "token": "token/",
+    "courses": "sfwd-courses/",
+    "lessons": "sfwd-lessons/",
+    "lessonDetails": "lessonDetails/",
+    "topics": "sfwd-topic/",
+    "topicDetails": "topicDetails/",
+    "courseLessons": "courseLessons/"
+  }
+}
