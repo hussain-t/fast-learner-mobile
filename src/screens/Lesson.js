@@ -6,11 +6,9 @@ import {
   View,
   Text,
   Platform,
-  StyleSheet,
   StatusBar,
 } from 'react-native';
 import HTMLView from 'react-native-htmlview';
-import { connect } from 'react-redux';
 import { MaterialIcons } from '@expo/vector-icons';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
@@ -36,8 +34,6 @@ const Lesson = ({ navigation }) => {
               stylesheet={htmlStyles}
               value={lesson.content.rendered}
             />
-            {/* <Text style={styles.textStyle}>{lesson.content.rendered.replace(/<[^>]*>/g, '')}</Text> */}
-            {/* <Text style={styles.textStyle}>{decodeEntities(lesson.content.rendered)}</Text> */}
           </CardSection>
           <TopicList lessonId={lesson.id} steps={steps} />
         </ScrollView>
