@@ -7,24 +7,39 @@ import { domain, API, endpoint } from '../config/app.json';
 let isRefreshing = false;
 const refreshSubscribers = [];
 
+async function refreshToken(token) {
+  const url = `${domain.env.stage + API.WP + API.JWT + endpoint.token}refresh`;
+
+  try {
+    const response = await axios.post(url, {
+      token: token.token,
+      email: token.user_email,
+    });
+    console.log('refreshToken.newtoken', response.data.token);
+    return response.data;
+  } catch (e) {
+    console.log('error', e.response);
+    return e;
+  }
+}
+
+function subscribeTokenRefresh(cb) {
+  refreshSubscribers.push(cb);
+}
+
+function onRrefreshed(token) {
+  refreshSubscribers.map(cb => cb(token));
+}
+
 // Add a response interceptor
 export default () => axios.interceptors.response.use(
-  (response) => {
-    // Do something with response data
-    console.log('intercept.success');
-
-    return response;
-  },
+  response => response,
   async (error) => {
     const {
       config,
       response: { status },
     } = error;
     const originalRequest = config;
-
-    // console.log('ERROR', JSON.stringify(error));
-    console.log('intercept.error');
-
     const statusCode = error.response.data.data.status;
 
     if (statusCode === 403) {
@@ -66,27 +81,3 @@ export default () => axios.interceptors.response.use(
     return Promise.reject(error);
   },
 );
-
-async function refreshToken(token) {
-  const url = `${domain.env.stage + API.WP + API.JWT + endpoint.token}refresh`;
-
-  try {
-    const response = await axios.post(url, {
-      token: token.token,
-      email: token.user_email,
-    });
-    console.log('refreshToken.newtoken', response.data.token);
-    return response.data;
-  } catch (e) {
-    console.log('error', e.response);
-    return e;
-  }
-}
-
-function subscribeTokenRefresh(cb) {
-  refreshSubscribers.push(cb);
-}
-
-function onRrefreshed(token) {
-  refreshSubscribers.map(cb => cb(token));
-}

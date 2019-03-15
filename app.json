@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "lexcampus",
+    "name": "fast-learner",
     "description": "This project is really great.",
-    "slug": "lexcampus",
+    "slug": "fast-learner",
     "privacy": "public",
     "sdkVersion": "30.0.0",
     "platforms": [

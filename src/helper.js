@@ -8,11 +8,8 @@ export const getNumFromString = (s) => {
   return parseInt(s.match(/\d+$/)[0]);
 };
 
-// const regex = /(<([^>]+)>)/ig;
-// const result = data.description.replace(regex, '');
-
 export const decodeEntities = (encodedString) => {
-  const translate_re = /&(nbsp|amp|quot|lt|gt);/g;
+  const translateRe = /&(nbsp|amp|quot|lt|gt);/g;
   const translate = {
     nbsp: ' ',
     amp: '&',
@@ -21,7 +18,7 @@ export const decodeEntities = (encodedString) => {
     gt: '>',
   };
   return encodedString
-    .replace(translate_re, (match, entity) => translate[entity])
+    .replace(translateRe, (match, entity) => translate[entity])
     .replace(/&#(\d+);/gi, (match, numStr) => {
       const num = parseInt(numStr, 10);
       return String.fromCharCode(num);

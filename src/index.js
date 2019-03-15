@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import { View, Alert } from 'react-native';
+import { View } from 'react-native';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/es/integration/react';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import {
-  AppLoading, Asset, Font, Icon, Notifications
+  AppLoading, Asset, Font, Icon,
 } from 'expo';
 
-import registerForNotifications from './services/push_notifications';
 import configureStore from './store';
 import AppNavigator from './config/AppNavigator';
 import NavigationService from './config/NavigationService';
@@ -34,24 +33,6 @@ class App extends Component {
       store,
       persistor,
     };
-  }
-  // state = {
-  //   isLoadingComplete: false,
-  // };
-
-  componentDidMount() {
-    // registerForNotifications();
-    // Notifications.addListener((notification) => {
-    //   const { data: { text }, origin } = notification;
-
-    //   if (origin === 'received' && text) {
-    //     Alert.alert(
-    //       'New Push Notification',
-    //       text,
-    //       [{ text: 'A new course ia added.' }],
-    //     );
-    //   }
-    // });
   }
 
   _loadResourcesAsync = async () => Promise.all([
@@ -82,7 +63,8 @@ class App extends Component {
   };
 
   render() {
-    if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
+    const { isLoadingComplete, skipLoadingScreen, store, persistor } = this.state;
+    if (!isLoadingComplete && !skipLoadingScreen) {
       return (
         <AppLoading
           startAsync={this._loadResourcesAsync}
@@ -92,8 +74,8 @@ class App extends Component {
       );
     }
     return (
-      <Provider store={this.state.store}>
-        <PersistGate persistor={this.state.persistor}>
+      <Provider store={store}>
+        <PersistGate persistor={persistor}>
           <AlertProvider>
             <View style={{ flex: 1 }}>
               <AppNavigator

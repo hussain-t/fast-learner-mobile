@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { ActivityIndicator, StatusBar, View } from 'react-native';
 import { connect } from 'react-redux';
-import jwtDecode from 'jwt-decode';
 
 import { loginUser } from '../actions';
 import { getToken } from '../config/LoginUtils';

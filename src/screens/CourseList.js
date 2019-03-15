@@ -10,7 +10,6 @@ import CourseDetail from './CourseDetail';
 
 class CourseList extends Component {
   static propTypes = {
-    navigation: PropTypes.object,
     cardWidth: PropTypes.bool,
   };
 
@@ -19,7 +18,6 @@ class CourseList extends Component {
   };
 
   componentDidMount() {
-    console.log('componentDidMount');
     this.props.coursesFetch();
   }
 
@@ -29,7 +27,7 @@ class CourseList extends Component {
   };
 
   renderCourse = (course) => {
-    const { cardWidth = false, navigation } = this.props;
+    const { cardWidth = false } = this.props;
     return <CourseDetail course={course} cardWidth={cardWidth} />;
   };
 
@@ -37,7 +35,6 @@ class CourseList extends Component {
     const { cardWidth = false } = this.props;
 
     if (cardWidth) {
-      console.log('if', cardWidth);
       return (
         <FlatList
           style={{ flexDirection: 'column' }}
@@ -49,7 +46,6 @@ class CourseList extends Component {
         />
       );
     }
-    console.log('else', cardWidth);
     return (
       <FlatList
         style={{ flexDirection: 'column' }}
@@ -62,12 +58,6 @@ class CourseList extends Component {
   }
 
   renderList() {
-    // if (this.props.loading) {
-    //     return (
-    //         <Spinner size="large" />
-    //     );
-    // }
-
     return (
       <ScrollView
         style={{ flex: 1 }}

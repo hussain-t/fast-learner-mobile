@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import {
   Text,
   ScrollView,
-  View,
-  Image,
   RefreshControl,
   StatusBar,
   Dimensions,
@@ -14,7 +12,7 @@ import 'intl';
 import 'intl/locale-data/jsonp/en';
 import { connect } from 'react-redux';
 
-import { Card, CardSection, Spinner } from '../components/common';
+import { CardSection } from '../components/common';
 import LessonList from './LessonList';
 import { decodeEntities } from '../helper';
 import { SwipeUpCard } from '../components/SwipeUpCard';
@@ -30,38 +28,15 @@ class Course extends Component {
   };
 
   static navigationOptions = {
-    // title: null,
     headerStyle: {
       backgroundColor: '#a65aff',
     },
-    // headerTitleStyle: {
-    //   color: '#FFFFFF',
-    //   fontSize: 12,
-    //   fontFamily: 'open-sans-regular',
-    // },
     headerTintColor: '#FFFFFF',
   };
 
   state = {
     refreshing: false,
   };
-
-  componentWillMount() {
-    // const authToken = this.props.auth.user.token;
-    // const { id } = this.props.navigation.state.params.course;
-    // this.setState({
-    //   isLoading: true,
-    // });
-    // this.props.stepsFetch({ authToken, id });
-  }
-
-  // componentDidUpdate(prevProps) {
-  //   if (this.state.isLoading && !this.props.steps.isLoading) {
-  //     this.setState({
-  //       isLoading: false,
-  //     });
-  //   }
-  // }
 
   onRefresh = () => {
     this.setState({ refreshing: true }, this.forceUpdate());
@@ -70,7 +45,6 @@ class Course extends Component {
 
   renderLessons = (course) => {
     const { steps } = course;
-    // const lessonIds = t;
 
     return <LessonList courseId={course.id} steps={steps} />;
   };
@@ -105,14 +79,6 @@ class Course extends Component {
       imageContainer,
     } = styles;
 
-    // if (this.props.steps.isLoading || this.state.isLoading) {
-    //   return (
-    //     <View style={{ flex: 1 }}>
-    //       <Spinner size="large" />
-    //     </View>
-    //   );
-    // }
-
     return (
       <ScrollView
         style={{ flex: 1, backgroundColor: '#FFFFFF' }}
@@ -121,23 +87,13 @@ class Course extends Component {
         }
       >
         <StatusBar translucent={false} barStyle="light-content" />
-        {/* <CardSection>
-          <View style={headerContentStyle}>
-            <Text style={textStyle}>{decodeEntities(title.rendered)}</Text>
-            <Text>{course_price_type}</Text>
-          </View>
-        </CardSection> */}
         <SwipeUpCard
           title={decodeEntities(title.rendered)}
           author={author_name}
           createdDate={new Intl.DateTimeFormat('en-US').format(new Date(date))}
           imageUrl={image_url.full_image}
         />
-        {/* <View>
-          <Image style={imageStyle} source={{ uri: image_url.full_image }} />
-        </View> */}
         <CardSection>
-          {/* <HTMLView value={short_description} /> */}
           <Text style={textStyle}>{short_description}</Text>
         </CardSection>
         {this.renderLessons(course)}

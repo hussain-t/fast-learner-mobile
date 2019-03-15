@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import {
   Text, View, Image, TouchableOpacity,
 } from 'react-native';
-// import { Actions } from 'react-native-router-flux';
-import HTMLView from 'react-native-htmlview';
 
 import NavigationService from '../config/NavigationService';
 import { Card, CardSection } from '../components/common';
@@ -15,7 +13,6 @@ class CourseDetail extends Component {
     const { item } = this.props.course;
     NavigationService.navigate('Course', {
       course: item,
-      // title: item.title.rendered,
     });
   };
 
@@ -24,9 +21,7 @@ class CourseDetail extends Component {
       id, title, course_price_type, image_url, course_price,
     } = this.props.course.item;
     const {
-      thumbnailStyle,
       headerContentStyle,
-      thumbnailContainerStyle,
       headerTextStyle,
       imageStyle,
     } = styles;
@@ -46,14 +41,7 @@ class CourseDetail extends Component {
             </CardSection>
 
             <CardSection>
-              {/* <View style={thumbnailContainerStyle}>
-                                <Image
-                                    source={{ uri: thumbnail_image }}
-                                    style={thumbnailStyle}
-                                />
-                            </View> */}
               <View style={headerContentStyle}>
-                {/* <HTMLView style={headerTextStyle} value={title.rendered} /> */}
                 <Text style={headerTextStyle} numberOfLines={1} ellipsizeMode="tail">
                   {decodeEntities(title.rendered)}
                 </Text>
