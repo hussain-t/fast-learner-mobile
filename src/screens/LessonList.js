@@ -49,7 +49,6 @@ class LessonList extends Component {
     Object.entries(lesData).forEach(([key, value]) => {
       if (key === item.id.toString()) {
         topicIds.push(Object.keys(value['sfwd-topic']));
-        console.log('topicIds', topicIds[0].length);
       }
     });
     return (

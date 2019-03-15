@@ -9,7 +9,6 @@ import { capitalize, decodeEntities } from '../helper';
 
 class CourseDetail extends Component {
   onCoursePress = () => {
-    console.log('this.props', this.props);
     const { item } = this.props.course;
     NavigationService.navigate('Course', {
       course: item,
