@@ -19,7 +19,6 @@ export default (state = INITIAL_STATE, action) => {
       return { loading: true, data: [], error: null };
     case TOPIC_FETCH_ALL_SUCCESS:
       if (action.payload) {
-        console.log('topic reducer', action.payload);
         return {
           data: [...state.data.filter(t => t.id !== action.payload.id), action.payload],
           error: null,

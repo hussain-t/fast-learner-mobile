@@ -1,77 +1,3 @@
-// import {
-//   LESSON_FETCH_ALL_SUCCESS,
-//   LESSON_FETCH_ALL_START,
-//   LESSON_FETCH_ALL_FAIL,
-//   LESSON_FETCH_ALL_DONE,
-//   LESSON_RESET,
-// } from '../actions/types';
-
-// const INITIAL_STATE = {
-//   isLoading: false,
-//   data: [],
-//   error: null,
-//   courseId: null,
-// };
-
-// export default (state = INITIAL_STATE, action) => {
-//   switch (action.type) {
-//     case LESSON_FETCH_ALL_START:
-//       return {
-//         isLoading: true,
-//         error: null,
-//         data: [],
-//         courseId: action.courseId,
-//       };
-//     // case LESSON_RESET:
-//     //   console.log('LESSON_RESET');
-//     //   return {
-//     //     isLoading: false,
-//     //     error: null,
-//     //     data: [],
-//     //     isReset: true,
-//     //   };
-//     case LESSON_FETCH_ALL_SUCCESS:
-//       if (action.payload.lesson.length) {
-//         return {
-//           // isLoading: false,
-//           data: [
-//             ...state.data.filter(l => l.id !== action.payload.lesson.id),
-//             action.payload.lesson,
-//           ],
-//           error: null,
-//           courseId: action.payload.courseId,
-//         };
-//       }
-
-//       // console.log('LessonReducer.action', action);
-//       return {
-//         error: null,
-//         data: [],
-//         courseId: action.payload.courseId,
-//       };
-//     case LESSON_FETCH_ALL_DONE:
-//       console.log('LESSON_FETCH_ALL_DONE.action', action);
-//       console.log('LESSON_FETCH_ALL_DONE.state', state);
-
-//       return Object.assign({}, state, {
-//         isLoading: false,
-//         error: null,
-//         courseId: action.courseId,
-//       });
-//     case LESSON_FETCH_ALL_FAIL:
-//       return {
-//         isLoading: false,
-//         error: action.payload.error,
-//         data: [],
-//         courseId: action.payload.courseId,
-//       };
-//     default:
-//       return state;
-//   }
-// };
-
-// ===============OLD CODE=======================
-
 import {
   LESSON_FETCH_ALL_SUCCESS,
   LESSON_FETCH_ALL_START,
@@ -131,15 +57,8 @@ export default (state = INITIAL_STATE, action) => {
         data: [...state.data.filter(c => c.courseId !== action.payload.courseId), course1],
       });
 
-      // case LESSON_FETCH_ALL_DONE:
-      //   return Object.assign({}, state, {
-      //     isLoading: false,
-      //     error: null,
-      //   });
-
     case LESSON_FETCH_ALL_FAIL:
       const courses2 = state.data.filter(item => item.courseId === action.payload.courseId);
-      console.log('LESSON_FETCH_ALL_FAIL', courses2);
 
       if (courses2.length) {
         const course2 = courses2[0];

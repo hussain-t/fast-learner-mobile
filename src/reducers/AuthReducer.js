@@ -38,7 +38,6 @@ export default (state = INITIAL_STATE, action) => {
         user: action.payload,
       };
     case LOGIN_USER_FAIL:
-      // return { ...state, error: `Authentication Failed! ${action.payload}`, password: '' };
       return {
         ...state,
         id: new Date().getUTCMilliseconds(),
