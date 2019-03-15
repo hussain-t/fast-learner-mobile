@@ -49,7 +49,6 @@ const handleLoginUser = async (dispatch, username, password) => {
       NavigationService.navigate('Home');
     })
     .catch((error) => {
-      console.log(error.response);
       dispatch({ type: LOGIN_USER_FAIL, payload: error.response.data.message });
     });
 };

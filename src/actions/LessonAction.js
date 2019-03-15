@@ -16,7 +16,6 @@ export const resetLesson = () => (dispatch) => {
   });
 };
 export const lessonsFetch = (authToken, ids, courseId) => (dispatch) => {
-  console.log('authToken action', authToken);
   dispatch({
     type: LESSON_FETCH_ALL_START,
     courseId,
@@ -79,15 +78,3 @@ export const lessonTitlesFetch = courseId => (dispatch) => {
       });
     });
 };
-
-// export const lessonsFetchWithoutAuth = id => (dispatch) => {
-//   axios
-//     .get(`${domain.env.stage}${API.WP}${API.LD}${endpoint.lessonDetails}${id}`)
-//     .then((lessons) => {
-//       dispatch({
-//         type: LESSON_FETCH_SUCCESS,
-//         payload: lessons.data,
-//       });
-//     })
-//     .catch(error => console.log(error.response));
-// };
