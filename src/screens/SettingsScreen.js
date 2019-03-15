@@ -29,7 +29,6 @@ class SettingsScreen extends Component {
   };
 
   render() {
-    console.log('user', this.props.auth.user);
     return (
       <View style={{ flex: 1 }}>
         <StatusBar translucent={false} barStyle="light-content" />

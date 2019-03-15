@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Text, KeyboardAvoidingView, StatusBar } from 'react-native';
+import { KeyboardAvoidingView, StatusBar } from 'react-native';
 import { connect } from 'react-redux';
-import HTMLView from 'react-native-htmlview';
 import { AntDesign } from '@expo/vector-icons';
 
 import axios from 'axios';
@@ -30,19 +29,13 @@ class LoginForm extends Component {
     errorAlert: '',
   };
 
-  componentDidMount() {
-    // if (this.props.success) {
-    //   this.props.navigation.navigate('Courses');
-    // }
-  }
-
   componentDidUpdate(prevProps) {
     if (this.props.id !== prevProps.id) {
       this.setState({ errorAlert: this.props.error });
     }
   }
 
-  // -------------Check-------------//
+  // -------------Without Redux-------------//
 
   // loginUser = async ({ username, password }) => {
   //   console.log('login');
@@ -71,12 +64,11 @@ class LoginForm extends Component {
   //   console.log('token', JSON.parse(token));
   // };
 
-  // -------------Check-------------//
+  // -------------Without Redux-------------//
 
   onButtonPress = () => {
     const { username, password, loginUser } = this.props;
 
-    // await this.loginUser({ username, password });
     loginUser({ username, password });
   };
 
@@ -115,7 +107,6 @@ class LoginForm extends Component {
                 placeholder="john-doe"
                 label={<AntDesign name="user" size={ICON_SIZE} color={ICON_COLOR} />}
                 keyboardType="email-address"
-                // icon={<AntDesign name="logout" size={ICON_SIZE} color={ICON_COLOR} />}
                 value={this.props.username}
                 onChangeText={this.onUsernameChange}
               />
@@ -125,7 +116,6 @@ class LoginForm extends Component {
                 secureTextEntry
                 placeholder="password"
                 label={<AntDesign name="lock1" size={ICON_SIZE} color={ICON_COLOR} />}
-                // icon={<AntDesign name="logout" size={ICON_SIZE} color={ICON_COLOR} />}
                 value={this.props.password}
                 onChangeText={this.onPasswordChange}
               />

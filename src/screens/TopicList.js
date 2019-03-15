@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
-  FlatList, Text, TouchableOpacity, View, Platform,
+  FlatList, Text, TouchableOpacity, View,
 } from 'react-native';
 import { connect } from 'react-redux';
 import { Foundation } from '@expo/vector-icons';
 
 import { getToken } from '../config/LoginUtils';
 import { topicsFetchWithoutAuth, topicsFetch } from '../actions';
-import { Card, CardSection, Spinner } from '../components/common';
+import { CardSection, Spinner } from '../components/common';
 import { ListItem, Separator } from '../components/List';
 import NavigationService from '../config/NavigationService';
 import { decodeEntities } from '../helper';
@@ -42,7 +42,6 @@ class TopicList extends Component {
 
   onTopicPress = (topic) => {
     NavigationService.navigate('Topic', {
-      // title: topic.title.rendered,
       topic,
     });
   };
@@ -64,14 +63,9 @@ class TopicList extends Component {
       ids.push(Object.keys(value['sfwd-topic']));
     });
 
-    console.log('ids', ids[0]);
-    // const ids = [123, 124, 125];
-
     const topicsData = ids[0]
       .map(id => topics.data.filter(t => t.id === parseInt(id))[0])
       .filter(t => t);
-
-    console.log('topicsData', topicsData);
 
     if (topics.loading) {
       return <Spinner size="large" />;

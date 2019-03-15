@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {
   ScrollView, View, Text, TouchableOpacity, Platform, StatusBar,
 } from 'react-native';
-import { MaterialIcons, Ionicons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 import { CardSection } from '../components/common';
@@ -27,7 +27,6 @@ const Topic = ({ navigation }) => {
           <Separator />
           <View>
             <CardSection>
-              {/* <Text style={styles.contentTextStyle}>{topic.content.rendered}</Text> */}
               <Text style={styles.contentTextStyle}>
                 {topic.content.rendered.replace(/<[^>]*>/g, '')}
               </Text>
