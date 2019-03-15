@@ -10,11 +10,9 @@ export const getToken = async () => {
   }
   token = await AsyncStorage.getItem(AUTH_TOKEN);
   return token;
-  // return token;
 };
 
 export const signIn = newToken => AsyncStorage.setItem(AUTH_TOKEN, JSON.stringify(newToken));
-// export const signIn = newToken => AsyncStorage.setItem(AUTH_TOKEN, newToken);
 
 export const signOut = () => {
   token = undefined;
