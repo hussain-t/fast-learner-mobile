@@ -13,13 +13,13 @@ class HomeScreen extends Component {
         <StatusBar translucent={false} barStyle="light-content" />
         <Swiper>
           <View style={styles.screen1}>
-            <Image style={styles.imageStyle} source={require('../../assets/patent1.jpeg')} />
+            <Image style={styles.imageStyle} source={require('../../assets/course3.jpg')} />
           </View>
           <View style={styles.screen2}>
-            <Image style={styles.imageStyle} source={require('../../assets/patent2.jpg')} />
+            <Image style={styles.imageStyle} source={require('../../assets/course5.jpg')} />
           </View>
           <View style={styles.screen3}>
-            <Image style={styles.imageStyle} source={require('../../assets/patent3.jpg')} />
+            <Image style={styles.imageStyle} source={require('../../assets/course6.jpg')} />
           </View>
         </Swiper>
         <Text style={styles.text}>Top Courses</Text>

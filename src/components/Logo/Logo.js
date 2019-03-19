@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  View, Text, Image, Keyboard, Animated, Platform,
+  View, Keyboard, Animated, Platform,
 } from 'react-native';
 
 import styles from './styles';
@@ -78,7 +78,7 @@ class Logo extends Component {
           <Animated.Image
             resizeMode="contain"
             style={imageStyle}
-            source={require('./images/logo.png')}
+            source={require('./images/fast-learner.png')}
           />
         </Animated.View>
       </View>
