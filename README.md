@@ -57,20 +57,20 @@ Go to `app.json` file and change the `stage` value to yours.
 
 ### Features
 
-👉 User register
-👉 Offline persistent
-👉 Integrate bbPress forum
-👉 Add to cart course
+👉 User register<br>
+👉 Offline persistent<br>
+👉 Integrate bbPress forum<br>
+👉 Add to cart course<br>
 👉 checkout with payment gateway
 
 ### Upgrades
 
-👉 Update Expo, React Navigations to newer version
-👉 Refactor with React Hooks
-👉 Replace REST API with [WPGraphQL](https://www.wpgraphql.com/)
+👉 Update Expo, React Navigations to newer version<br>
+👉 Refactor with React Hooks<br>
+👉 Replace REST API with [WPGraphQL](https://www.wpgraphql.com/)<br>
 👉 Replace Redux with [Apollo GraphQL Client](https://www.apollographql.com/)
 
 ## Support
 
-If you find any issues with this project, please report an issue at [GitHub Issues](https://github.com/hussain-t/fast-learner-mobile/issues)
+If you find any issues with this project, please report an issue at [GitHub Issues](https://github.com/hussain-t/fast-learner-mobile/issues)<br>
 Thank you for checking out Fast Learner!
