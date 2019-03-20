@@ -52,3 +52,25 @@ Go to `app.json` file and change the `stage` value to yours.
 👉 Lesson and Topics<br>
 👉 Protected content by user enrollment<br>
 👉 Custom Vimeo video player<br>
+
+## TODO
+
+### Features
+
+👉 User register
+👉 Offline persistent
+👉 Integrate bbPress forum
+👉 Add to cart course
+👉 checkout with payment gateway
+
+### Upgrades
+
+👉 Update Expo, React Navigations to newer version
+👉 Refactor with React Hooks
+👉 Replace REST API with [WPGraphQL](https://www.wpgraphql.com/)
+👉 Replace Redux with [Apollo GraphQL Client](https://www.apollographql.com/)
+
+## Support
+
+If you find any issues with this project, please report an issue at [GitHub Issues](https://github.com/hussain-t/fast-learner-mobile/issues)
+Thank you for checking out Fast Learner!
