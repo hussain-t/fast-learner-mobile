@@ -99,7 +99,7 @@ class LoginForm extends Component {
     return (
       <Container>
         <StatusBar translucent={false} barStyle="light-content" />
-        <KeyboardAvoidingView behavior="padding">
+        <KeyboardAvoidingView style={{ flex: 1 }} behavior="padding">
           <Logo />
           <Card>
             <CardSection>
