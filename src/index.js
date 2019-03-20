@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/es/integration/react';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import {
   AppLoading, Asset, Font, Icon,
 } from 'expo';
 
-import configureStore from './store';
+import store from './store';
 import AppNavigator from './config/AppNavigator';
 import NavigationService from './config/NavigationService';
 import { AlertProvider } from './components/Alert';
@@ -24,15 +23,8 @@ EStyleSheet.build({
 });
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    const { store, persistor } = configureStore();
-    this.state = {
-      isLoadingComplete: false,
-      store,
-      persistor,
-    };
+  state = {
+    isLoadingComplete: false,
   }
 
   _loadResourcesAsync = async () => Promise.all([
@@ -63,8 +55,7 @@ class App extends Component {
   };
 
   render() {
-    const { isLoadingComplete, skipLoadingScreen, store, persistor } = this.state;
-    if (!isLoadingComplete && !skipLoadingScreen) {
+    if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
       return (
         <AppLoading
           startAsync={this._loadResourcesAsync}
@@ -75,17 +66,15 @@ class App extends Component {
     }
     return (
       <Provider store={store}>
-        <PersistGate persistor={persistor}>
-          <AlertProvider>
-            <View style={{ flex: 1 }}>
-              <AppNavigator
-                ref={(navigatorRef) => {
-                  NavigationService.setTopLevelNavigator(navigatorRef);
-                }}
-              />
-            </View>
-          </AlertProvider>
-        </PersistGate>
+        <AlertProvider>
+          <View style={{ flex: 1 }}>
+            <AppNavigator
+              ref={(navigatorRef) => {
+                NavigationService.setTopLevelNavigator(navigatorRef);
+              }}
+            />
+          </View>
+        </AlertProvider>
       </Provider>
     );
   }

@@ -49,7 +49,7 @@ const handleLoginUser = async (dispatch, username, password) => {
       NavigationService.navigate('Home');
     })
     .catch((error) => {
-      dispatch({ type: LOGIN_USER_FAIL, payload: error.response.data.message });
+      dispatch({ type: LOGIN_USER_FAIL, payload: 'Authentication failed' });
     });
 };
 

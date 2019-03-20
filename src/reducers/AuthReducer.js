@@ -38,6 +38,7 @@ export default (state = INITIAL_STATE, action) => {
         user: action.payload,
       };
     case LOGIN_USER_FAIL:
+      console.log('Authentication Failed!', action.payload);
       return {
         ...state,
         id: new Date().getUTCMilliseconds(),

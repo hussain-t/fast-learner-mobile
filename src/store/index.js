@@ -1,7 +1,5 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 import ReduxThunk from 'redux-thunk';
-import { persistStore, persistCombineReducers } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
 import logger from 'redux-logger';
 
 import reducers from '../reducers';
@@ -13,20 +11,8 @@ if (process.env.NODE_ENV === 'development') {
   middleware.push(logger);
 }
 
-const persistConfig = {
-  key: 'root',
-  storage,
-};
-
-const persistReducer = persistCombineReducers(persistConfig, reducers);
-
-const configureStore = () => {
-  const store = createStore(persistReducer, {}, compose(applyMiddleware(...middleware)));
-  const persistor = persistStore(store);
-
-  return { store, persistor };
-};
+const store = createStore(reducers, {}, compose(applyMiddleware(...middleware)));
 
 axiosInterceptors();
 
-export default configureStore;
+export default store;
