@@ -4,13 +4,11 @@ Fast Learner - an eLearning mobile app with React Native and LearnDash
 
 ## Screenshots
 
-<img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/login.PNG" alt="Login" width="250"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/login-error.PNG" alt="Login Error" width="250"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/home1.PNG" alt="Home 1" width="250">
+<img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/login-error.PNG" alt="Login Error" width="250"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/home1.PNG" alt="Home 1" width="250"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/courses.PNG" alt="Courses" width="250">
 
-<img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/home2.PNG" alt="Home 2" width="250"><img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/courses.PNG" alt="Courses" width="250"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/course-details1.PNG" alt="Course Details 1" width="250">
+<img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/course-details1.PNG" alt="Course Details 1" width="250"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/course-details2.PNG" alt="Course Details 2" width="250"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/protected-content.PNG" alt="Protected Content" width="250">
 
-<img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/course-details2.PNG" alt="Course Details 2" width="250"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/protected-content.PNG" alt="Protected Content" width="250"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/lesson.PNG" alt="Lesson" width="250">
-
-<img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/topic.PNG" alt="Topic" width="250"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/profile.PNG" alt="Profile" width="250">
+<img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/lesson.PNG" alt="Lesson" width="250"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/topic.PNG" alt="Topic" width="250"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/profile.PNG" alt="Profile" width="250">
 
 ## Prerequisites
 
@@ -59,6 +57,7 @@ Go to `app.json` file and change the `stage` value to yours.
 
 👉 User register<br>
 👉 Offline persistent<br>
+👉 Lesson and topic progression and completion
 👉 Integrate bbPress forum<br>
 👉 Add to cart course<br>
 👉 checkout with payment gateway
