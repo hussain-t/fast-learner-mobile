@@ -46,7 +46,7 @@ Go to `app.json` file and change the `stage` value to yours.
 ## Covered features:
 
 👉 WordPress Authentication (login) with JWT<br>
-👉 Refresh toke with my custom plugin [WordPress JWT Authentication Refresh Token](https://github.com/hussain-t/wp-jwt-auth-refresh-token)<br>
+👉 Refresh token with my custom plugin [WordPress JWT Authentication Refresh Token](https://github.com/hussain-t/wp-jwt-auth-refresh-token)<br>
 👉 Basic custom image swiper<br>
 👉 Course list<br>
 👉 Lesson and Topics<br>
