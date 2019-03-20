@@ -13,16 +13,16 @@ $ expo start
 
 ## Screenshots
 
-![Login](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/login-validation1.png)
-![Login Error](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/login-validation1.png)
-![Home](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/login-validation2.png)
-![Home](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/login-validation2.png)
-![Courses](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/profile-page.png)
-![Course Details](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/profile-page.png)
-![Course Details](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/profile-page.png)
-![Lesson](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/profile-page.png)
-![Topic](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/profile-page.png)
-![Profile](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/profile-page.png)
+![Login](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/login.PNG)
+![Login Error](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/login-error.PNG)
+![Home](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/home.PNG)
+![Home](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/home2.PNG)
+![Courses](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/courses.PNG)
+![Course Details](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/course-details.PNG)
+![Course Details](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/course-details2.PNG)
+![Lesson](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/lesson.PNG)
+![Topic](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/topic.PNG)
+![Profile](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/profile.PNG)
 
 ## Prerequisites
 
