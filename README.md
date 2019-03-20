@@ -7,15 +7,19 @@ Fast Learner - an eLearning mobile app with React Native and LearnDash
 ```
 $ npm install -g expo-cli
 $ cd fast-learner-mobile
+$ npm install
 $ expo start
 ```
 
 ## Screenshots
 
 ![Login](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/login-validation1.png)
+![Login Error](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/login-validation1.png)
+![Home](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/login-validation2.png)
 ![Home](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/login-validation2.png)
 ![Courses](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/profile-page.png)
-![Single Course](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/profile-page.png)
+![Course Details](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/profile-page.png)
+![Course Details](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/profile-page.png)
 ![Lesson](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/profile-page.png)
 ![Topic](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/profile-page.png)
 ![Profile](https://github.com/hussain-t/react-wp-graphql-auth/blob/master/src/images/profile-page.png)
