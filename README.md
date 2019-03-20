@@ -13,17 +13,11 @@ $ expo start
 
 ## Screenshots
 
-<img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/login.PNG" width="200"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/login-error.PNG" width="200">
-![Login](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/login.PNG)
-![Login Error](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/login-error.PNG)
-![Home](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/home.PNG)
-![Home](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/home2.PNG)
-![Courses](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/courses.PNG)
-![Course Details](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/course-details.PNG)
-![Course Details](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/course-details2.PNG)
-![Lesson](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/lesson.PNG)
-![Topic](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/topic.PNG)
-![Profile](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/profile.PNG)
+<img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/login.PNG" alt="Login" width="250"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/login-error.PNG" alt="Login Error" width="250"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/home.PNG" alt="Home" width="250"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/home2.PNG" alt="Home" width="250">
+
+<img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/courses.PNG" alt="Courses" width="250"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/course-details.PNG" alt="Course Details" width="250"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/course-details2.PNG" alt="Course Details" width="250"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/lesson.PNG" alt="Lesson" width="250">
+
+<img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/topic.PNG" alt="Topic" width="250"><img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/profile.PNG" alt="Profile" width="250">
 
 ## Prerequisites
 
