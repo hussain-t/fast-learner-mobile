@@ -13,7 +13,8 @@ $ expo start
 
 ## Screenshots
 
-![Login](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/login.PNG) 
+<img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/login.PNG" width="200"> <img src="https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/login-error.PNG" width="200">
+![Login](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/login.PNG)
 ![Login Error](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/login-error.PNG)
 ![Home](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/home.PNG)
 ![Home](https://github.com/hussain-t/fast-learner-mobile/blob/master/src/screenshots/home2.PNG)
