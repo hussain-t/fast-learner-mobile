@@ -1,8 +1,7 @@
 {
   "domain": {
     "env": {
-      "stage": "https://lexcampus.on-its-way.com/",
-      "prod": "https://www.lexcampus.in/"
+      "stage": "https://lexcampus.on-its-way.com/"
     }
   },
   "API": {
