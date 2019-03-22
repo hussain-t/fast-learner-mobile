@@ -55,6 +55,7 @@ Go to `app.json` file and change the `stage` value to yours.
 
 ### Features
 
+👉 Quizzes
 👉 User register<br>
 👉 Offline persistent<br>
 👉 Lesson and topic progression and completion
@@ -68,6 +69,7 @@ Go to `app.json` file and change the `stage` value to yours.
 👉 Refactor with React Hooks<br>
 👉 Replace REST API with [WPGraphQL](https://www.wpgraphql.com/)<br>
 👉 Replace Redux with [Apollo GraphQL Client](https://www.apollographql.com/)
+👉 Unit test
 
 ## Support
 
